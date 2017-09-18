@@ -120,7 +120,7 @@ public class MainForm extends Application {
         checkStudent.setContent(grid_student);
 //--------------------------------------------------
         final ToggleGroup group = new ToggleGroup();
-        RadioButton rb1 = new RadioButton("Adaptive");
+        RadioButton rb1 = new RadioButton("Additive");
         rb1.setToggleGroup(group);
         rb1.setSelected(true);
         RadioButton rb2 = new RadioButton("Multiplicative");
@@ -226,7 +226,7 @@ public class MainForm extends Application {
 
             lb4_v.setText(String.valueOf(fisher_stud[1]));
 
-            if(Double.valueOf(lb3_v.getText()) < fisher_stud[2]){
+            if(Double.valueOf(lb3_v.getText()) > fisher_stud[2]){
                 lb_res_s.setText("The coefficients are significant");
                 lb_res_s.setTextFill(Color.GREEN);
             }else {
